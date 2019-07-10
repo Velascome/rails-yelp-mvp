@@ -1,0 +1,22 @@
+<h1> Reviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Review</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <body>
+    <% @reviews.each do |review| %>
+    <tr>
+      <td> <%= review.content %></td>
+      <td> <%= review.rating %></td>
+    </tr>
+    <% end %>
+  </body>
+</table>
+
+<%= link_to "Return to restaurant", restaurant_path(@restaurant) %>
+<%= link_to "Return to restaurant list", restaurants_path %>
+

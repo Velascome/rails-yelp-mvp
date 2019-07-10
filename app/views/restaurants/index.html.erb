@@ -1,0 +1,25 @@
+<h1>Restaurants List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Phone</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <body>
+    <% @restaurants.each do |restaurant| %>
+    <tr>
+      <td> <%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+      <td> <%= restaurant.category %></td>
+      <td> <%= restaurant.phone_number %></td>
+      <td> <%= restaurant.address %></td>
+    </tr>
+    <% end %>
+  </body>
+</table>
+
+<%= link_to "Create new", new_restaurant_path %>
+
